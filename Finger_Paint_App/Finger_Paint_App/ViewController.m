@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "DrawView.h"
 
 @interface ViewController ()
+
+@property (nonatomic) NSMutableArray *listOfLines;
 
 
 @end
@@ -18,15 +21,53 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.listOfLines = [[NSMutableArray alloc] init];
+    ((DrawView *)self.view).strokeColor = [UIColor orangeColor];
 }
 
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint touchPoint = [touch locationInView:self.view];
+    
+    NSMutableArray *line = [NSMutableArray array];
+    [line addObject:[NSValue valueWithCGPoint:touchPoint]];
+    
+    [self.listOfLines addObject:line];
+}
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint touchPoint = [touch locationInView:self.view];
+    
+    NSMutableArray *line = [self.listOfLines lastObject];
+    [line addObject:[NSValue valueWithCGPoint:touchPoint]];
+    
+    ((DrawView *)self.view).listOfLines = self.listOfLines;
+    [self.view setNeedsDisplay];
+
+}
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self touchesMoved:touches withEvent:event];
+    
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+    [self touchesEnded:touches withEvent:event];
+    
+}
 
 @end

@@ -13,7 +13,7 @@
 		522BCBDF1DD6C18D0001B1BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522BCBDD1DD6C18D0001B1BC /* Main.storyboard */; };
 		522BCBE11DD6C18D0001B1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522BCBE01DD6C18D0001B1BC /* Assets.xcassets */; };
 		522BCBE41DD6C18D0001B1BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522BCBE21DD6C18D0001B1BC /* LaunchScreen.storyboard */; };
-		522BCBF11DD6C3FE0001B1BC /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522BCBF01DD6C3FE0001B1BC /* DrawViewController.m */; };
+		522BCBF41DD6C7040001B1BC /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 522BCBF31DD6C7040001B1BC /* DrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		522BCBE01DD6C18D0001B1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522BCBE31DD6C18D0001B1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		522BCBE51DD6C18D0001B1BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		522BCBEF1DD6C3FE0001B1BC /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
-		522BCBF01DD6C3FE0001B1BC /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		522BCBF21DD6C7040001B1BC /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		522BCBF31DD6C7040001B1BC /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,6 @@
 			children = (
 				522BCBDA1DD6C18D0001B1BC /* ViewController.h */,
 				522BCBDB1DD6C18D0001B1BC /* ViewController.m */,
-				522BCBEF1DD6C3FE0001B1BC /* DrawViewController.h */,
-				522BCBF01DD6C3FE0001B1BC /* DrawViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -112,6 +110,8 @@
 		522BCBEE1DD6C3B20001B1BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				522BCBF21DD6C7040001B1BC /* DrawView.h */,
+				522BCBF31DD6C7040001B1BC /* DrawView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -187,10 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522BCBF11DD6C3FE0001B1BC /* DrawViewController.m in Sources */,
 				522BCBDC1DD6C18D0001B1BC /* ViewController.m in Sources */,
 				522BCBD91DD6C18D0001B1BC /* AppDelegate.m in Sources */,
 				522BCBD61DD6C18D0001B1BC /* main.m in Sources */,
+				522BCBF41DD6C7040001B1BC /* DrawView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
