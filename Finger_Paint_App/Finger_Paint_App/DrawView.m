@@ -10,11 +10,12 @@
 
 @implementation DrawView
 
-- (instancetype)init
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super init];
+    self = [super initWithCoder:aDecoder];
     if (self) {
         self.listOfLines = [[NSMutableArray alloc] init];
+        self.arrayOfColours = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -22,11 +23,11 @@
 
 -(void)drawRect:(CGRect)rect
 {
-    
-    UIBezierPath *path = [[UIBezierPath alloc] init];
-    
-    for (NSArray *listOfPoints in self.listOfLines)
+    for (int line = 0; line < [self.listOfLines count]; line++)
     {
+        NSArray *listOfPoints = self.listOfLines[line];
+        UIBezierPath *path = [[UIBezierPath alloc] init];
+        
         for (int i = 0; i <[listOfPoints count]; i++)
         {
             
@@ -44,11 +45,12 @@
             }
 
         }
+        
+        [[self.arrayOfColours objectAtIndex:line] setStroke];
+        [path setLineWidth:3.0];
+        [path stroke];
+        
     }
-
-    [self.strokeColor setStroke];
-    [path setLineWidth:2.0];
-    [path stroke];
 }
 
 

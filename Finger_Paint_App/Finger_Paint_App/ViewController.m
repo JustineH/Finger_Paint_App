@@ -12,6 +12,7 @@
 @interface ViewController ()
 
 @property (nonatomic) NSMutableArray *listOfLines;
+@property (nonatomic) UIColor *currentColor;
 
 
 @end
@@ -23,12 +24,20 @@
     [super viewDidLoad];
     self.listOfLines = [[NSMutableArray alloc] init];
     ((DrawView *)self.view).strokeColor = [UIColor orangeColor];
+    self.currentColor = [UIColor blueColor];
 }
 
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+
+- (IBAction)paintColor:(UIButton *)sender
+{
+    self.currentColor = sender.backgroundColor;
+    
 }
 
 
@@ -41,7 +50,9 @@
     [line addObject:[NSValue valueWithCGPoint:touchPoint]];
     
     [self.listOfLines addObject:line];
+    [((DrawView *)self.view).arrayOfColours addObject:self.currentColor];
 }
+
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 
@@ -57,11 +68,13 @@
 
 }
 
+
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self touchesMoved:touches withEvent:event];
     
 }
+
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {

@@ -20,7 +20,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="DrawView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Sup-j1-a5Z">
+                                <rect key="frame" x="16" y="607" width="343" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abv-eO-2lH">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.31992978007688866" blue="0.13220720919691364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8md-RL-i1o"/>
+                                            <constraint firstAttribute="width" constant="59" id="J7W-aX-ysD"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.96921900751656354" green="1" blue="0.9592804061939344" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="paintColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYG-EY-U1N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvR-za-GL9">
+                                        <rect key="frame" x="71" y="0.0" width="59" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.59111072743052029" blue="0.11392982515019223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.96921900750000001" green="1" blue="0.95928040619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="paintColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fHy-V3-KbB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60k-b8-1vc">
+                                        <rect key="frame" x="142" y="0.0" width="59" height="40"/>
+                                        <color key="backgroundColor" red="0.13879683294013656" green="0.35984004533349834" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.96921900750000001" green="1" blue="0.95928040619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="paintColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UKk-dR-Fu6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMn-Nx-UMy">
+                                        <rect key="frame" x="213" y="0.0" width="59" height="40"/>
+                                        <color key="backgroundColor" red="0.34034324765242607" green="1" blue="0.14289788444766105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.96921900750000001" green="1" blue="0.95928040619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="paintColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q9n-DI-EUc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlE-UB-6ov">
+                                        <rect key="frame" x="284" y="0.0" width="59" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.96921900750000001" green="1" blue="0.95928040619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="paintColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4j-1O-6Bx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mvR-za-GL9" firstAttribute="top" secondItem="Sup-j1-a5Z" secondAttribute="top" id="0T0-9V-ymj"/>
+                                    <constraint firstItem="aMn-Nx-UMy" firstAttribute="top" secondItem="Sup-j1-a5Z" secondAttribute="top" id="2J1-tT-ImT"/>
+                                    <constraint firstAttribute="bottom" secondItem="aMn-Nx-UMy" secondAttribute="bottom" id="4Em-wo-PXK"/>
+                                    <constraint firstItem="xlE-UB-6ov" firstAttribute="top" secondItem="Sup-j1-a5Z" secondAttribute="top" id="AM8-cX-Hgf"/>
+                                    <constraint firstItem="mvR-za-GL9" firstAttribute="height" secondItem="Abv-eO-2lH" secondAttribute="height" id="CXc-ny-0mt"/>
+                                    <constraint firstItem="mvR-za-GL9" firstAttribute="width" secondItem="Abv-eO-2lH" secondAttribute="width" id="IHm-w5-gri"/>
+                                    <constraint firstAttribute="bottom" secondItem="xlE-UB-6ov" secondAttribute="bottom" id="JuA-9c-eDW"/>
+                                    <constraint firstAttribute="bottom" secondItem="mvR-za-GL9" secondAttribute="bottom" id="SzU-da-3Nb"/>
+                                    <constraint firstItem="60k-b8-1vc" firstAttribute="top" secondItem="Sup-j1-a5Z" secondAttribute="top" id="VYR-Vt-zkB"/>
+                                    <constraint firstItem="60k-b8-1vc" firstAttribute="width" secondItem="Abv-eO-2lH" secondAttribute="width" id="Y7U-hc-6Zj"/>
+                                    <constraint firstItem="aMn-Nx-UMy" firstAttribute="height" secondItem="Abv-eO-2lH" secondAttribute="height" id="et5-pa-1gO"/>
+                                    <constraint firstItem="aMn-Nx-UMy" firstAttribute="width" secondItem="Abv-eO-2lH" secondAttribute="width" id="g6U-Rl-NW2"/>
+                                    <constraint firstItem="60k-b8-1vc" firstAttribute="height" secondItem="Abv-eO-2lH" secondAttribute="height" id="g6l-eM-cg1"/>
+                                    <constraint firstItem="xlE-UB-6ov" firstAttribute="height" secondItem="Abv-eO-2lH" secondAttribute="height" id="gPd-RV-ufw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Abv-eO-2lH" secondAttribute="bottom" id="vJE-Ky-q10"/>
+                                    <constraint firstItem="xlE-UB-6ov" firstAttribute="width" secondItem="Abv-eO-2lH" secondAttribute="width" id="wAm-ns-EG8"/>
+                                    <constraint firstItem="Abv-eO-2lH" firstAttribute="top" secondItem="Sup-j1-a5Z" secondAttribute="top" id="xUZ-fA-Xr7"/>
+                                    <constraint firstAttribute="bottom" secondItem="60k-b8-1vc" secondAttribute="bottom" id="yo6-Uv-zoh"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sup-j1-a5Z" secondAttribute="bottom" constant="20" id="Hpc-XX-uhu"/>
+                            <constraint firstItem="Sup-j1-a5Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kW4-eF-Cii"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

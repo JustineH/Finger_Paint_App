@@ -12,6 +12,6 @@
 
 @property (nonatomic) NSMutableArray *listOfLines;
 @property (nonatomic) UIColor *strokeColor;
-
+@property (nonatomic) NSMutableArray *arrayOfColours;
 
 @end
